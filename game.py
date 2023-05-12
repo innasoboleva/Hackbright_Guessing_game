@@ -16,13 +16,16 @@ while True:
     if your_guess.isdigit():
         your_guess1 = int(your_guess)
         tries += 1
-        if your_guess1 is number:
-            print(f"Well done, {user_name}! You found my number in {tries} tries!")
-            break
-        else:
-            if your_guess1 > number:
-                print("Your guess is too high, try again.")
+        if your_guess in range(1,101):
+            if your_guess1 is number:
+                print(f"Well done, {user_name}! You found my number in {tries} tries!")
+                break
             else:
-                print("Your guess is too low, try again.")
+                if your_guess1 > number:
+                    print("Your guess is too high, try again.")
+                else:
+                    print("Your guess is too low, try again.")
+        else:
+            print("Your input is invalid! Please try again!")       
     else:
         print("Wrong input, please try again") 
