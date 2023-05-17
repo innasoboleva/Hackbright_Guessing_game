@@ -7,21 +7,21 @@ print(f"Hi {user_name}!")
 tries = 0
 
 number = random.randint(1, 100)
-print("Jessica, I'm thinking of a number between 1 and 100.\n")
+print(f"{user_name}, I'm thinking of a number between 1 and 100.\n")
 print("Try to guess my number.\n")
 
 
 while True:
     your_guess = input("Your guess? ")
     if your_guess.isdigit():
-        your_guess1 = int(your_guess)
+        guess = int(your_guess)
         tries += 1
-        if your_guess in range(1,101):
-            if your_guess1 is number:
+        if guess in range(1,101):
+            if guess == number:
                 print(f"Well done, {user_name}! You found my number in {tries} tries!")
                 break
             else:
-                if your_guess1 > number:
+                if guess > number:
                     print("Your guess is too high, try again.")
                 else:
                     print("Your guess is too low, try again.")
